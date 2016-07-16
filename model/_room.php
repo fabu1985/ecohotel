@@ -64,11 +64,18 @@ public function saveservice($habitacion, $servicio, $fecha){
 }
 
 	public function update(){
-		$query = 'UPDATE `room` SET  
-		`status`= '.$this->status.',
-		`price`= '.$this->price.',
-		`category_id`= '.$this->category_id.' 
-		WHERE number = '.$this->number;
+		$query = '';
+		if (isset($this->category_id) && isset($this->price)) {
+		    $query = 'UPDATE `room` SET  
+			`status`= '.$this->status.',
+			`price`= '.$this->price.',
+			`category_id`= '.$this->category_id.' 
+			WHERE number = '.$this->number;
+		}else{
+			$query = 'UPDATE `room` SET  
+			`status`= '.$this->status.'
+			WHERE number = '.$this->number;
+		}
 		echo $query;
 		if ($this->dbc->query($query)){
 		}else{
@@ -104,8 +111,8 @@ public function saveservice($habitacion, $servicio, $fecha){
 
 		}
 
-	public function listaServicios($param=''){
-		$query = 'SELECT s.* from services s order by id desc';
+	public function listaServicios($desde='', $hasta=''){
+		$query = 'SELECT s.* from services s where fecha >= "'.$desde.'" and fecha <= "'.$hasta.'" order by id desc';
 			if ($result = $this->dbc->query($query)){
 				$lista = Ftn::toArray($result);
 				foreach ($lista as $key => $value) {

@@ -23,6 +23,10 @@ body {
   display: none;
 }
 
+.titleSmall{
+  color: #1dd657;
+}
+
 .reportes {
   text-align: center;
 }

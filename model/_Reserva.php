@@ -16,15 +16,31 @@ Class _Reserva{
 
 
 	
-	public function listar($param=0){
-			$query = 'SELECT nro, user_id, (select concat(u.first_name, \' \', u.last_name) from user u where u.id=r.user_id) nombre, 
-room_id, habitacion, estado, check_in, check_out, precio, 
-DATEDIFF(check_out,check_in) as total_dias, 
-(c.prize * DATEDIFF(check_out,check_in) * 
- (IF(c.id = 1, 1, IF(c.id=2, 1.2, IF(c.id=3, 1.5, 1))))
-) as precio_total 
-FROM reserva r INNER JOIN category c on c.id=r.habitacion where estado = '.$param.'
-			ORDER BY nro DESC';
+	public function listar($estado=0, $desde='', $hasta=''){
+			$query = 'SELECT 
+				nro, 
+				user_id, 
+				(select 
+					concat(u.first_name, \' \', u.last_name) 
+				from user u 
+				where u.id=r.user_id) nombre, 
+				room_id, 
+				habitacion, 
+				estado, 
+				check_in, 
+				check_out, 
+				precio, 
+				DATEDIFF(check_out,check_in) as total_dias, 
+				(c.prize * DATEDIFF(check_out,check_in) * (IF(c.id = 1, 1, IF(c.id=2, 1.2, IF(c.id=3, 1.5, 1))))) as precio_total 
+				FROM reserva r 
+				INNER JOIN category c 
+					on c.id=r.habitacion 
+				where estado = '.$estado;
+			if ($desde != '' && $hasta != ''){
+				$whereDates = ' and check_in >= "'.$desde.'" and check_out <= "'.$hasta.'"';
+				$query = $query.$whereDates;
+			}
+			$query = $query.' ORDER BY nro DESC';
 			if ($result = $this->dbc->query($query)){
 				return Ftn::toArray($result);
 			}else{

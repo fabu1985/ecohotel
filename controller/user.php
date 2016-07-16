@@ -51,13 +51,20 @@ class User{
 				$user->setFirst_name($_POST["nombre"]);
 			}
 			if ($error == 1){
-				$errorMsj = "<div class='alert alert-danger col-lg-9'>".
+				$errorMsj = "<div id='mensajeerror' class='alert alert-danger col-lg-9'>".
             					"<h4>".$errorMsj."</h4>".
         					"</div>";
 				$data=array(
-				"errorMsj" => $errorMsj
+				"errorMsj" => $errorMsj,
+				"nombre" => $_POST["nombre"],
+				"apellido" => $_POST["apellido"],
+				"email" => $_POST["email"]
 				);
-				view::parse("login", $data);
+				if(session::getvalue('usertype') == 'admin'){
+					view::parse("user", $data);
+				}else{
+					view::parse("login", $data);
+				}
 			}else{
 				if(@$_POST["usertype"] == ''){
 					$user->setUserType(1);

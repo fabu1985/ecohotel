@@ -20,8 +20,8 @@
             <li  class="active"><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
             <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
             <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
-            <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Habitaciones</a></li>
-            <li><a href="{link}admin"><i class="fa fa-edit"></i> Reportes</a></li>
+            <li><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
+            <li><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
             <li><a href="{link}main/profile"><i class="fa fa-user"></i> Perfil</a></li>
             <li><a href="{link}login/logout"><i class="fa fa-power-off"></i> Log out</a></li>
           </ul>
@@ -44,7 +44,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1><small>Gestión de Reservas</small></h1>
+            <h1><small class="titleSmall">Gestión de Reservas</small></h1>
           </div>
         </div><!-- /.row -->
         
@@ -94,46 +94,6 @@
             </div><!-- /.row -->
             </div>
             </div>
-            </div>
-            <div class="row">
-           <div class="col-lg-12">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Reservas Activas</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover table-striped tablesorter">
-                    <thead>
-                      <tr>
-                        <th>N° </th>
-                        <th>Nombre </th>
-                        <th>Habitación </th>
-                        <th>Check in </th>
-                        <th>Check out </th>
-                        <th>Total</th>
-                        <th>Cancelar </th>
-                      </tr>
-                    </thead>
-                    <tbody id="resultado">
-                      [listaActivas]
-                      <tr>
-                        <td>{nro}</td>
-                        <td>{nombre}</td>
-                        <td>{habitacion}</td>
-                        <td>{check_in}</td>
-                        <td>{check_out}</td>
-                        <td>${precio}</td>
-                         <td>
-                          <a href="#">
-                            <i class="fa fa-trash-o fa-1x col-lg-4 decline" tag="{nro}"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      [listaActivas]
-                  </table>
-                </div>
-            </div><!-- /.row -->
         </div><!-- /.row -->
 
       </div><!-- /#page-wrapper -->

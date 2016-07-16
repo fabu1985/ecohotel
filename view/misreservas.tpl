@@ -20,8 +20,8 @@
             <li style="{hideAdminOptions}"><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
             <li style="{hideAdminOptions}"><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
             <li><a href="{link}admin/user" style="{hideAdminOptions}"><i class="fa fa-users"></i> Usuarios</a></li>
-            <li style="{hideAdminOptions}"><a href="{link}admin/room"><i class="fa fa-building-o"></i> Habitaciones</a></li>
-            <li style="{hideAdminOptions}"><a href="{link}admin"><i class="fa fa-edit"></i> Reportes</a></li>
+            <li style="{hideAdminOptions}"><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
+            <li style="{hideAdminOptions}"><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
             <li><a href="{link}main/profile"><i class="fa fa-user"></i> Perfil</a></li>
             <li><a href="{link}login/logout"><i class="fa fa-power-off"></i> Log out</a></li>
           </ul>
@@ -75,9 +75,7 @@
                       [listaActivas]
                   </table>
                 </div>
-            </div><!-- /.row -->
-
-                        
+            </div><!-- /.row -->                        
             </div>
             </div>
         </div>
@@ -121,12 +119,9 @@
                   <a href="#" class="close" data-dismiss="alert">&times;</a>
                   <strong>Para que podamos informarle personalmente el estado de su reserva y brindarle nuestro mejor servicio recuerde actualizar su información de contacto en la sección de <a href="{link}main/profile">perfil</a></strong>
               </div>
-            </div><!-- /.row -->
-              
-                        
+            </div><!-- /.row -->              
             </div>
             </div>
         </div>
         </div><!-- /.row -->
-
       </div><!-- /#page-wrapper -->

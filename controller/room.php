@@ -67,10 +67,18 @@ class Room{
 		$error = 0;
 		$errorMsj = "";
 		if (!empty($_POST)){
+			$pageServices = true;
 			$room->setNumber($_POST["numero"]);
-			$room->setCategory_id($_POST["description"]);
 			$room->setStatus($_POST["status"]);
-			$room->setPrice($_POST["precio"]);
+			if(isset($_POST["description"])){
+				$room->setCategory_id($_POST["description"]);	
+				$pageServices = false;
+			}
+			if (isset($_POST["precio"])) {
+				$room->setPrice($_POST["precio"]);
+				$pageServices = false;
+			}
+			
 			if ($error == 1){
 				$errorMsj = "<div class='alert alert-danger col-lg-9'>".
 				"<h4>".$errorMsj."</h4>".
@@ -81,7 +89,12 @@ class Room{
 				view::parse("room", $data);
 			}else{
 				$room->update();
-				header("location:".HOME."admin/room");
+				if ($pageServices) {
+					header("location:".HOME."admin/room");
+				}else{
+					header("location:".HOME."admin/habitaciones");
+				}
+				
 			}
 		}else{
 			$data=array(

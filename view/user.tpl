@@ -20,8 +20,8 @@
             <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
             <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
             <li  class="active"><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
-            <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Habitaciones</a></li>
-            <li><a href="{link}admin"><i class="fa fa-edit"></i> Reportes</a></li>
+            <li><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
+            <li><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
             <li><a href="{link}main/profile"><i class="fa fa-user"></i> Perfil</a></li>
             <li><a href="{link}login/logout"><i class="fa fa-power-off"></i> Log out</a></li>
           </ul>
@@ -44,7 +44,7 @@
 
   <div class="row">
     <div class="col-lg-12">
-      <h1><small>Usuarios</small></h1>
+      <h1><small class="titleSmall">Usuarios</small></h1>
       <div class="alert alert-success alert-dismissable" id="mensajeexitousuario">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <a class="alert-link" href="#"></a> Su usuario fue creado exitosamente. <a href="{link}admin/user">Volver</a>
@@ -57,43 +57,50 @@
   </div><!-- /.row -->
   
   <div id="usuariosCrear">
-    <button type="submit" id="botoncrearusuario" class="btn" style="margin-bottom: 18px;">Nuevo Usuario</button>
-    <div style="display: none;" id="nuevousuario">
-      <form role="form" action="{link}user/save" method="POST" style="width: 350px;">
-          <fieldset>
-              <div class="form-group">
-                  <label>Nombre </label>
-                  <input class="form-control " placeholder="Nombre" name="nombre" type="nombre" autofocus> 
-              </div>
-              <div class="form-group">
-                  <label>Apellido</label>
-                  <input class="form-control " placeholder="Apellido" name="apellido" type="apellido">
-              </div>      
-              <div class="form-group">
-                  <label> Email </label>
-                  <input class="form-control " placeholder="E-mail" name="email" type="email">
-              </div>
-              <div class="form-group">
-                  <label> Contraseña </label>
-                  <input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
-              </div>
-              <div class="form-group">
-                  <label> Repetir la contraseña </label>
-                  <input class="form-control" placeholder="Repita Contraseña" name="re-password" type="password" value="">
-              </div>
-              <div class="form-group">
-                <label>Tipo de usuario</label>
-                <select name="usertype" class="form-control">
-                  <option value="2">Administrador</option>
-                  <option value="1">Cliente</option>
-                </select>
-              </div>
-              <!-- Change this to a button or input when using this as a form -->
-              <button type="submit" class="btn" style="margin-bottom: 18px;">Guardar</button>
-          </fieldset>
-      </form>
+    <!--<div class="row" style="margin-bottom: 18px; margin-left: 0px;">
+      
+    </div>-->
+    <div class="row">{errorMsj}</div>
+    <div class="panel panel-primary col-lg-5">
+      <div class="panel-body ">
+        <button type="submit" id="botoncrearusuario" class="btn" style="margin-bottom: 18px;">Nuevo Usuario</button>
+        <div style="display: none;" id="nuevousuario">
+          <form role="form" action="{link}user/save" method="POST" style="width: 350px;">
+              <fieldset>
+                  <div class="form-group">
+                      <label>Nombre </label>
+                      <input class="form-control " required placeholder="Nombre" name="nombre" type="nombre" autofocus value="{nombre}"> 
+                  </div>
+                  <div class="form-group">
+                      <label>Apellido</label>
+                      <input class="form-control " required placeholder="Apellido" name="apellido" type="apellido" value="{apellido}">
+                  </div>      
+                  <div class="form-group">
+                      <label> Email </label>
+                      <input class="form-control " required placeholder="E-mail" name="email" type="email" value="{email}">
+                  </div>
+                  <div class="form-group">
+                      <label> Contraseña </label>
+                      <input class="form-control" required placeholder="Contraseña" name="password" type="password" value="">
+                  </div>
+                  <div class="form-group">
+                      <label> Repetir la contraseña </label>
+                      <input class="form-control"  required placeholder="Repita Contraseña" name="re-password" type="password" value="">
+                  </div>
+                  <div class="form-group">
+                    <label>Tipo de usuario</label>
+                    <select name="usertype" class="form-control">
+                      <option value="2">Administrador</option>
+                      <option value="1">Cliente</option>
+                    </select>
+                  </div>
+                  <!-- Change this to a button or input when using this as a form -->
+                  <button type="submit" class="btn" style="margin-bottom: 18px;">Guardar</button>
+              </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
-
     <div class="row">
        <div class="col-lg-12">
         <div class="panel panel-primary">

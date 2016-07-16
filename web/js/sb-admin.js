@@ -32,13 +32,20 @@ $(function() {
     };
     var AdminCrearUsuarioMensajeExito = function(){
     	var msjId = '#mensajeexitousuario';
-    	$(msjId).hide();
-    	var location = String(window.location);
-    	if(location.match(/user\/save/)){
-    		$(msjId).show();
-    		$('#usuariosCrear').hide();
-    		$('#usuariosAyuda').hide();
-    	}
+        var msjIdError = '#mensajeerror';
+        if($(msjIdError).length==0){
+            $(msjId).hide();
+            var location = String(window.location);
+            if(location.match(/user\/save/)){
+                $(msjId).show();
+                $('#usuariosCrear').hide();
+                $('#usuariosAyuda').hide();
+            }
+        }else{
+            $(msjId).hide();
+            var nuevoUsuarioForm = '#nuevousuario';
+            $(nuevoUsuarioForm).toggle();
+        }
     };
     AdminCrearUsuarioMensajeExito();
     AdminFormularioCrearUsuario();

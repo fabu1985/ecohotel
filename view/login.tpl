@@ -12,12 +12,9 @@
             <div class="col-md-12">
             <div class="col-md-1"></div>  
             <div class="col-md-10">
-            <div class="col-md-2">
-               <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#promociones">Promociones</button> 
-            </div>
             <div class="col-md-2" >
-              <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#quienessomos">Quienes Somos</button>  
-            </div>
+              <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#quienessomos">Quiénes Somos</button>  
+            </div>            
              <div class="col-md-2">
                <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#ubicacion">Ubicación</button> 
             </div>
@@ -25,17 +22,18 @@
               <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#servicios">Servicios</button>  
             </div>
              <div class="col-md-2">
-               <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#mision">Mision y Vision</button>
+               <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#mision">Misión y Visión</button>
+            </div>
+            <div class="col-md-2">
+               <a style="font-size: 12px;font-weight: normal !important;" href="{link}main/reservar" class="btn btn-lg btn-success btn-block side-menu" >Consultar Disponibilidad</a> 
             </div>
             <div class="col-md-2" >
-              <button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#contacto">Certificación LEED</button>  
+              <!--<button type="submit" class="btn btn-lg btn-success btn-block side-menu" data-toggle="modal" data-target="#contacto">Certificación LEED</button>  -->
+              <a style="font-size: 12px;font-weight: normal !important;" href="{link}" class="btn btn-lg btn-success btn-block side-menu" >Home</a> 
             </div>
             </div>
-            <div class="col-md-1"></div>
             </div>
         </div>
-
-
 
       <div class="row">
           <h4>{errorMsj}</h4>

@@ -49,15 +49,27 @@ class Reservar{
 			    	$_SESSION['res']['Hasta']=$_POST["hasta"];
 			    	header("location: ".HOME."reservar/seleccionar");
 				}else{
-					$errorMsj = "<div class='alert alert-danger col-lg-8'>".
+					$errorMsj = "<div class='alert alert-danger col-lg-12'>".
 	            					"<p>No hay habitaciones disponibles para la fecha</p>".
 	        					"</div>";
-			    	Session::setvalue('errormsj', $errorMsj);
-			    	header("location: ".HOME."main/reservar");					
-			  }
+	        		if(session::getvalue("usertype")!="notlogin"){
+						$data = array(
+							"errormsj" => $errorMsj,
+							"username" => session::getValue("username")
+							);
+			    		header("location: ".HOME."main/reservar");
+			    	}else{	
+						$data = array(
+							"errormsj" => $errorMsj,
+							"username" => session::getValue("username")
+							);
+			    		View::parse("disphome", $data);	
+			    	}
+			  	}
+
 			}else{
 				if($interval<=0){
-					$errorMsj = "<div class='alert alert-danger col-lg-8'>
+					$errorMsj = "<div class='alert alert-danger col-lg-12'>
 					<p><strong>La reserva no se pudo concretar por el siguiente 
 								motivo:</strong></p>
 					<ul>
@@ -68,7 +80,7 @@ class Reservar{
 		    	header("location: ".HOME."main/reservar");}
 		    else{		
 	    		if($interval>30){
-						$errorMsj = "<div class='alert alert-danger col-lg-8'>
+						$errorMsj = "<div class='alert alert-danger col-lg-12'>
 						<p><strong>La reserva no se pudo concretar por el siguientes motivo:</strong></p>
 						<ul>
 							<li>La reserva no puede ser mayor a 30 días</li>
@@ -78,7 +90,7 @@ class Reservar{
 			    	header("location: ".HOME."main/reservar");}
 			    else{
 			    	if($today<0){
-							$errorMsj = "<div class='alert alert-danger col-lg-8'>
+							$errorMsj = "<div class='alert alert-danger col-lg-12'>
 							<p><strong>La reserva no se pudo concretar por el siguientes motivo:</strong></p>
 							<ul>
 							<li>La fecha inicial es menor que la actual</li>
@@ -88,7 +100,7 @@ class Reservar{
 				    	header("location: ".HOME."main/reservar");}
 				    else{
 				    	if($today>365){
-								$errorMsj = "<div class='alert alert-danger col-lg-8'>
+								$errorMsj = "<div class='alert alert-danger col-lg-12'>
 								<p><strong>La reserva no se pudo concretar por el siguientes motivo:</strong></p>
 								<ul>
 								<li>No puede efectuarse reservas con más de 1 año de anticipación</li>
@@ -133,7 +145,11 @@ class Reservar{
 				'total_dias' => $total_dias,
 				'precio_total' => $precio_total
 			);
-			view::parse('seleccionar', $data);	
+			if(session::getvalue("usertype")!="notlogin"){
+				view::parse('seleccionar', $data);	
+			}else{
+				View::parse("disphome", $data);
+			}
 			Session::setValue('hab', '');
 			Session::setValue('res', '');
 		}else{

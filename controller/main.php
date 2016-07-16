@@ -14,7 +14,9 @@ class Main{
 			$user = new _user();
 			$user->activateAccount($activationCode);
 		}
-		View::parse("login");
+		//View::parse("login");
+		session::setvalue("usertype","notlogin");
+		View::parse("home");
 	}
 
 	public static function reservar(){
@@ -25,7 +27,11 @@ class Main{
 			"errormsj" => $mensaje,
 			"username" => session::getValue("username")
 			);
-		View::parse("disp", $data);
+		if(session::getvalue("usertype")=="notlogin"){
+			View::parse("disphome", $data);
+		}else{
+			View::parse("disp", $data);
+		}
 		session::setvalue("errormsj",null);
 	}
 
@@ -63,9 +69,16 @@ class Main{
 			"username" => session::getValue("username")
 		);
 		View::parse("misreservas",$data);
-
 	}
-	
+
+	public static function IrLogin(){
+		@$activationCode = split("=", $_SERVER['REQUEST_URI'])[1];
+		if($activationCode != ""){
+			$user = new _user();
+			$user->activateAccount($activationCode);
+		}
+		View::parse("login");
+	}
 }
 
  ?>

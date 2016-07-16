@@ -20,8 +20,8 @@
       <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
       <li  class="active"><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
       <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
-      <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Habitaciones</a></li>
-      <li><a href="{link}admin"><i class="fa fa-edit"></i> Reportes</a></li>
+      <li><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
+      <li><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
       <li><a href="{link}main/profile"><i class="fa fa-user"></i> Perfil</a></li>
       <li><a href="{link}login/logout"><i class="fa fa-power-off"></i> Log out</a></li>
     </ul>
@@ -44,7 +44,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1><small> Disponibilidad de Habitaciones</small></h1>
+            <h1><small class="titleSmall">Disponibilidad de Habitaciones</small></h1>
           </div>
         </div><!-- /.row -->
   <!-- .row Título-->
@@ -57,36 +57,36 @@
           </div>
         </div><!-- /.row -->
         <!-- row Panel Gestion -->
-        <div class="col-lg-6">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-list-ul"></i> Ocupar o librar Habitación</h3>
-            </div>
-            <div class="panel-body">
-              <form role="form" action="{link}room/update" method="post">
-                <div class="row">
-                  <fieldset>
-                    <div class="col-lg-4">
-                      <div class="form-group input-group">
-                        <label> Número </label>
-                        <select class="form-control" name="numero" id="room_numero">
-                            <option></option>
-                            [listanum]
-                            <option value="{number}">{number}</option>
-                            [listanum]
-                        </select>
+          <div class="col-lg-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Editar Habitaciones</h3>
+              </div>
+              <div class="panel-body">
+                <form role="form" action="{link}room/update" method="post">
+                  <div class="row">
+                    <fieldset>
+                      <div class="col-lg-4">
+                        <div class="form-group input-group">
+                          <label> Número </label>
+                          <select required class="form-control" name="numero" id="room_numero">
+                              <option></option>
+                              [listanum]
+                              <option value="{number}">{number}</option>
+                              [listanum]
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group input-group">
-                        <label> Disponibilidad </label>
-                        <select class="form-control" name="status" id="room_status">
-                            <option></option>
-                            <option value="0">Libre</option>
-                            <option value="1">Ocupada</option>
-                        </select> 
+                      <div class="col-lg-4">
+                        <div class="form-group input-group">
+                          <label> Disponibilidad </label>
+                          <select class="form-control" name="status" id="room_status" required>
+                              <option></option>
+                              <option value="0">Libre</option>
+                              <option value="1">Ocupada</option>
+                          </select> 
+                        </div>
                       </div>
-                    </div>
 
                     </fieldset>
                   </div>
@@ -150,7 +150,7 @@
         <!-- .row Título-->
         <div class="row">
           <div class="col-lg-12">
-            <h1><small>Consumos</small></h1>
+            <h1><small class="titleSmall">Consumos</small></h1>
           </div>
         </div><!-- /.row -->  
         <div class="row">
@@ -166,7 +166,7 @@
                       <div class="col-lg-4">
                         <div class="form-group">
                            <label> N° de Habitación</label>
-                          <select class="form-control" name="habitacion">
+                          <select class="form-control" name="habitacion" required>
                               <option></option>
                               [listanum2]
                               <option value="{number}">{number}</option>
@@ -177,7 +177,7 @@
                       <div class="col-lg-4">
                         <div class="form-group">
                           <label> Servicio </label>
-                          <select class="form-control" name="servicio">
+                          <select class="form-control" name="servicio" required>
                             <option value="Desayuno">WiFi</option>
                             <option value="Desayuno">Desayuno</option>
                             <option value="Almuerzo">Almuerzo</option>
@@ -208,7 +208,7 @@
           <div class="col-lg-12">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Consumo de Habitación</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Consumos por Habitación</h3>
               </div>
               <div class="panel-body">
                 <div class="col-lg-6">

@@ -20,9 +20,7 @@
       <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
       <li><a href="{link}login/logout"><i class="fa fa-power-off"></i> Log out</a></li>
     </ul>
-
-    <ul class="nav navbar-nav navbar-right navbar-user">
-      
+    <ul class="nav navbar-nav navbar-right navbar-user">      
       <li class="dropdown user-dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eco Hotel La Luna <b class="caret"></b></a>
         <ul class="dropdown-menu">
