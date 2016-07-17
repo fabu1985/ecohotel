@@ -72,43 +72,51 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="\ecohotel\web\images\hotel4.jpg" alt="Chania" width="460" height="345">
+        <img src="\ecohotel\web\images\1.jpg" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <h3> Calidad de servicios</h3>
+          <p> Los servicios que ofrecemos superan cualquier expectativa de nuestros clientes.  </p>
         </div>
       </div>
 
       <div class="item">
-        <img src="\ecohotel\web\images\hotel6.jpg" alt="Chania" width="460" height="345">
+        <img src="\ecohotel\web\images\2.jpg" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <h3><titlesmall>Confort<titlesmall></h3>
+          <p>Nuestras habitaciones simple, dobles  triples se encuentran totalmente equipadas. Brindando así comodidad y bienestar</p>
         </div>
       </div>
     
       <div class="item">
-        <img src="\ecohotel\web\images\hotel22.jpg" alt="Flower" width="460" height="345">
+        <img src="\ecohotel\web\images\3.jpg" alt="Flower" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <h3>Eco Arquitectura</h3>
+          <p>Nuestras habitaciones, baños, salas, etc, están construidos de materiales totalmente naturales y ecológicos.</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="\ecohotel\web\images\doble.jpg" alt="Flower" width="460" height="345">
+        <img src="\ecohotel\web\images\sala.jpg" alt="Flower" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <h3>Atención personalizada</h3>
+          <p>Porque el cliente es lo primero, es que nuestro equipo de trabajo esta ocnformado por personal altamente capacitado.</p>
         </div>
-      </div>
-  
+      </div> 
+
+      <div class="item">
+        <img src="\ecohotel\web\images\terraza.jpg" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Excelencia y calidez</h3>
+          <p>Se brinda a nuestros clientes toda la cordialidad y respeto que nuestros clienten se merecen.</p>
+        </div>
+      </div>      
     </div>
 
     <!-- Left and right controls -->
