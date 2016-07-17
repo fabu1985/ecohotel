@@ -129,6 +129,24 @@ public function saveservice($habitacion, $servicio, $fecha){
 
 		}
 
+	public function listaServiciosRegistrados($param=''){
+		$query = 'SELECT s.* from services s order by id desc';
+			if ($result = $this->dbc->query($query)){
+				$lista = Ftn::toArray($result);
+				foreach ($lista as $key => $value) {
+					foreach ($value as $key2 => $value2){
+						if ($key2 == 'status'){
+							$lista[$key][$key2] = ($value2 == '0') ? "Libre" : "Ocupada";
+						}
+					}
+				}
+				return $lista;
+			}else{
+				die('Error de Conexion con la DB: '.$query);
+			}
+
+		}
+
 	public function verDisponible($fechaDesde, $fechaHasta, $categoria){
 		$query = 'SELECT  	`r`.`id` as room_id,
 							`r`.`number` as nro,

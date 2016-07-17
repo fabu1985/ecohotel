@@ -41,32 +41,26 @@
 
 
 <div id="page-wrapper">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h1><small class="titleSmall">Disponibilidad de Habitaciones</small></h1>
-          </div>
-        </div><!-- /.row -->
-  <!-- .row Título-->
         <div class="row">
           <div class="col-lg-12">
             <!--h1><small>Habitaciones</small></h1-->
             <div class="alert alert-success">
-              <a class="alert-link" href="#"></a> Ud. podrá manipular la información referente a los  servicios ofrecidos por habitación.
+              <a class="alert-link" href="#"></a> ESTADO DE HABITACIONES. Ud. podrá modificar el estado de una habitación LIBRE u OCUPADA, segun corresponda.
             </div>
           </div>
         </div><!-- /.row -->
         <!-- row Panel Gestion -->
-          <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-5">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Editar Habitaciones</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Librar/Ocupar Habitaciones</h3>
               </div>
               <div class="panel-body">
                 <form role="form" action="{link}room/update" method="post">
                   <div class="row">
                     <fieldset>
-                      <div class="col-lg-4">
+                      <div class="col-lg-6">
                         <div class="form-group input-group">
                           <label> Número </label>
                           <select required class="form-control" name="numero" id="room_numero">
@@ -77,7 +71,7 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-lg-4">
+                      <div class="col-lg-6">
                         <div class="form-group input-group">
                           <label> Disponibilidad </label>
                           <select class="form-control" name="status" id="room_status" required>
@@ -87,10 +81,8 @@
                           </select> 
                         </div>
                       </div>
-
                     </fieldset>
                   </div>
-                  <div class="row">
                     <div class="col-lg-6">
                       <button type="submit" class="btn btn-lg btn-primary btn-block">Guardar</button>
                     </div>
@@ -101,12 +93,7 @@
                 </form>  
               </div>
             </div>
-          </div><!-- Panel deshabilitar -->
-        </div> 
-
-        <!-- .row Panel Habitaicon Activas-->
-        <div class="row">
-          <div class="col-lg-12">
+        <div class="col-lg-7">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-list-ul"></i> Disponibilidad de Habitaciones</h3>
@@ -147,14 +134,16 @@
           </div>
         </div><!-- /.row Panel Habitaciones-->
 
-        <!-- .row Título-->
         <div class="row">
           <div class="col-lg-12">
-            <h1><small class="titleSmall">Consumos</small></h1>
+            <!--h1><small>Habitaciones</small></h1-->
+            <div class="alert alert-success">
+              <a class="alert-link" href="#"></a> REGISTRAR CONSUMOS. Ud. podrá reistrar los consumos solicitados por habitación.
+            </div>
           </div>
-        </div><!-- /.row -->  
+        </div><!-- /.row -->        <!-- .row Título-->  
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-list-ul"></i> Registrar Consumos por habitación</h3>
@@ -163,9 +152,9 @@
                 <form role="form" action="{link}room/saveservice" method="post">
                   <div class="row">
                     <fieldset>
-                      <div class="col-lg-4">
+                      <div class="col-lg-3">
                         <div class="form-group">
-                           <label> N° de Habitación</label>
+                           <label> N° de Hab.</label>
                           <select class="form-control" name="habitacion" required>
                               <option></option>
                               [listanum2]
@@ -187,7 +176,7 @@
                         </div>
                       </div>
                       <div class="col-lg-4">
-                        <label>Dia de consumo</label>
+                        <label>Fecha</label>
                         <input class="form-control" name="fecha" type="date" autofocus required>
                       </div>
                     </fieldset>
@@ -205,7 +194,7 @@
             </div>  
           </div>
 
-          <div class="col-lg-12">
+          <div class="col-lg-7">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-list-ul"></i> Consumos por Habitación</h3>
@@ -213,9 +202,6 @@
               <div class="panel-body">
                 <div class="col-lg-6">
                   <div class="form-group input-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-search"></i> N° de Habitación <span class="caret"></span>
-                    </button>
                     <ul  id="where" class="dropdown-menu" role="menu" tag="room">
                       <li><a id="what" href="#" value="">Todas</a></li>
                       <li><a id="what" href="#" value="1">Single</a></li>
@@ -233,11 +219,11 @@
                         <th>Servicio</i></th>
                         <th>Precio</i></th>
                         <th>Fecha </i></th>
-                        <th>Eliminar registro </i></th>
-                      </tr>
+                        <th>Eliminar <i class="fa "></i></th>
+                     </tr>
                     </thead>
                     <tbody id="resultado">
-                      [listaServicios]
+                      [listaServiciosRegistrados]
                       <tr id="room_{number}">
                         <td>{habitacion}</td>
                         <td>{servicio}</td>
@@ -245,11 +231,11 @@
                         <td>{fecha}</td>
                         <td>
                           <a href="#">
-                            <i class="fa fa-trash-o fa-1x col-lg-4 decline" tag="{nro}"></i>
+                            <i class="fa fa-trash-o fa-1x col-lg-4 decline" tag="{habitacion}"></i>
                           </a>
                         </td>
                       </tr>
-                      [listaServicios]               
+                      [listaServiciosRegistrados]               
                     </tbody>
                   </table>
                 </div> <!-- Fin de la tabla -->

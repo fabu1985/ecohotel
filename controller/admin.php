@@ -57,6 +57,7 @@ class Admin{
 			$room = new _room();
 			$lista = $room->buscar();
 			$listaServicios = $room->listaServicios();
+			$listaServiciosRegistrados = $room->listaServiciosRegistrados();
 			$category = new _category();
 			$category2 = new _category();
 			$numero = new _room();
@@ -66,6 +67,7 @@ class Admin{
 			$data = array(
 				"lista" => $lista,
 				"listaServicios" => $listaServicios,
+				"listaServiciosRegistrados" => $listaServiciosRegistrados,
 				"listaCateg" => $listaCat,
 				"listaCateg2" => $listaCat2,
 				"listanum" => $listanum,
@@ -95,6 +97,7 @@ class Admin{
 			$room = new _room();
 			$lista = $room->buscar();
 			$listaServicios = $room->listaServicios();
+			$listaServiciosRegistrados = $room->listaServiciosRegistrados();
 			$category = new _category();
 			$category2 = new _category();
 			$numero = new _room();
@@ -104,6 +107,7 @@ class Admin{
 			$data = array(
 				"lista" => $lista,
 				"listaServicios" => $listaServicios,
+				"listaServiciosRegistrados" => $listaServiciosRegistrados,
 				"listaCateg" => $listaCat,
 				"listaCateg2" => $listaCat2,
 				"listanum" => $listanum,
