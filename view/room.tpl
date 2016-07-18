@@ -43,9 +43,10 @@
 <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <!--h1><small>Habitaciones</small></h1-->
+            <h1><small class="titleSmall"><class="col-md-12">Gestión de Estado y Consumo de Habitaciones</small></h1>
+           <!--h1><small>Habitaciones</small></h1-->
             <div class="alert alert-success">
-              <a class="alert-link" href="#"></a> ESTADO DE HABITACIONES. Ud. podrá modificar el estado de una habitación LIBRE u OCUPADA, segun corresponda.
+              <a class="alert-link" href="#"></a> ESTADO DE HABITACIONES. Ud. podrá modificar el estado de una habitación, según corresponda.
             </div>
           </div>
         </div><!-- /.row -->
@@ -138,7 +139,7 @@
           <div class="col-lg-12">
             <!--h1><small>Habitaciones</small></h1-->
             <div class="alert alert-success">
-              <a class="alert-link" href="#"></a> REGISTRAR CONSUMOS. Ud. podrá reistrar los consumos solicitados por habitación.
+              <a class="alert-link" href="#"></a> REGISTRAR CONSUMOS. Ud. podrá registrar los consumos solicitados por nuestros húespedes.
             </div>
           </div>
         </div><!-- /.row -->        <!-- .row Título-->  
@@ -167,7 +168,7 @@
                         <div class="form-group">
                           <label> Servicio </label>
                           <select class="form-control" name="servicio" required>
-                            <option value="Desayuno">WiFi</option>
+                            <option value="Wifi">Wifi</option>
                             <option value="Desayuno">Desayuno</option>
                             <option value="Almuerzo">Almuerzo</option>
                             <option value="Merienda">Merienda</option>

@@ -46,22 +46,6 @@
           </div>
         </div><!-- /.row -->
 
-        <!--<div class="row">
-           <div class="col-lg-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Descargar reportes</h3>
-              </div>
-              <div class="panel-body">
-                 <div class="reportes">
-                    <a href="{link}web\ReservasPendientes.csv" target="_blank">Reservas Pendientes</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="{link}web\ReservasActivas.csv" target="_blank">Reservas Activas</a>&nbsp;&nbsp;&nbsp;&nbsp; 
-                    <a href="{link}web\ConsumoDeServicios.csv" target="_blank">Consumo diario del bar</a>
-                 </div>
-            </div>
-          </div -->
-        </div>
-
         <div class="row">{errormsj}</div>
         <div class="row">
            <div class="col-lg-4">

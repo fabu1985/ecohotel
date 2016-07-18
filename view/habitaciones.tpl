@@ -43,20 +43,13 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1><small>Gestión de Habitaciones</small></h1>
+            <h1><small class="titleSmall">Gestión de Habitaciones</small></h1>
           </div>
         </div><!-- /.row -->
 
   <!-- .row Título-->
-        <div class="row">
-          <div class="col-lg-12">
-            <h1><small>Habitaciones</small></h1>
-            <div class="alert alert-success">
-              <a class="alert-link" href="#"></a> Ud tiene toda la información necesaria de sus Habitaciones.
-            </div>
-          </div>
-        </div><!-- /.row -->
         <!-- row Panel Gestion -->
+        <br>
         <div class="row">
           <div class="col-lg-6">
             <div class="panel panel-primary">

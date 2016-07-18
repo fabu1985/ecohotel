@@ -37,8 +37,8 @@ Class _Room{
 
 public function saveservice($habitacion, $servicio, $fecha){
 	$precio = 0;
-	if($servicio == 'WiFi'){
-		$precio = '80';
+	if($servicio == 'Wifi'){
+		$precio = '15';
 	}
 	if($servicio == 'Desayuno'){
 		$precio = '60';
@@ -56,7 +56,7 @@ public function saveservice($habitacion, $servicio, $fecha){
 		habitacion,
 		servicio,
 		precio,
-		fecha) values ('$habitacion', '$servicio', '$precio', '$fecha')";
+		fecha) values ('$habitacion', '$servicio', '$precio', '$sysdate')";
 		if ($this->dbc->query($query)){
 		}else{
 			die('Error de Conexion con la DB: '.$query);
