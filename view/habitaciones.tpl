@@ -17,8 +17,8 @@
     <ul class="nav navbar-nav side-nav">
       <li><a href="{link}main/reservar"><i class="fa fa-building-o"></i> Consultar Disponibilidad</a></li>
       <li style="padding-left: 16px; color: green;"><b> OPCIONES DE ADMINISTRADOR</b></li>
-      <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
-      <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
+      <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas Pendientes</a></li>
+      <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Gestión de Servicios</a></li>
       <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
       <li  class="active"><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
       <li><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
@@ -40,12 +40,15 @@
 </nav>
 
 <div id="page-wrapper">
-
         <div class="row">
           <div class="col-lg-12">
             <h1><small class="titleSmall">Gestión de Habitaciones</small></h1>
           </div>
-        </div><!-- /.row -->
+        </div>
+      <div class="alert alert-success alert-dismissable" id="usuariosAyuda">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <a class="alert-link" href="#"></a> Podrá gestionar altas, bajas y modificaciones de habitaciones.
+      </div><!-- /.row -->
 
   <!-- .row Título-->
         <!-- row Panel Gestion -->
@@ -54,7 +57,7 @@
           <div class="col-lg-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Nuevas Habitaciones</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Agregar Habitaciones</h3>
               </div>
               <div class="panel-body">
                 <form role="form" action="{link}room/save" method="post">
@@ -168,7 +171,7 @@
           <div class="col-lg-12">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Habitaciones Activas</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Listado de habitaciones activas</h3>
               </div>
               <div class="panel-body">
                 <div class="col-lg-6">

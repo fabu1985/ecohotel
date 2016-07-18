@@ -17,8 +17,8 @@
     <ul class="nav navbar-nav side-nav">
       <li><a href="{link}main/reservar"><i class="fa fa-building-o"></i> Consultar Disponibilidad</a></li>
       <li style="padding-left: 16px; color: green;"><b> OPCIONES DE ADMINISTRADOR</b></li>
-      <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
-      <li  class="active"><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
+      <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas Pendientes</a></li>
+      <li  class="active"><a href="{link}admin/room"><i class="fa fa-building-o"></i> Gestión de Servicios</a></li>
       <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
       <li><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
       <li><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
@@ -168,6 +168,7 @@
                         <div class="form-group">
                           <label> Servicio </label>
                           <select class="form-control" name="servicio" required>
+                            <option></option>
                             <option value="Wifi">Wifi</option>
                             <option value="Desayuno">Desayuno</option>
                             <option value="Almuerzo">Almuerzo</option>
@@ -178,7 +179,7 @@
                       </div>
                       <div class="col-lg-4">
                         <label>Fecha</label>
-                        <input class="form-control" name="fecha" type="date" autofocus required>
+                        <div class="form-control" name="fecha" type="date" autofocus required>
                       </div>
                     </fieldset>
                   </div> <!-- /.row --> 

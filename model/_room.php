@@ -56,7 +56,7 @@ public function saveservice($habitacion, $servicio, $fecha){
 		habitacion,
 		servicio,
 		precio,
-		fecha) values ('$habitacion', '$servicio', '$precio', '$sysdate')";
+		fecha) values ('$habitacion', '$servicio', '$precio', '$fecha')";
 		if ($this->dbc->query($query)){
 		}else{
 			die('Error de Conexion con la DB: '.$query);

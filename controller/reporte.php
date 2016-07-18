@@ -20,9 +20,9 @@ class Reporte{
 			$interval = Ftn::difDate($desde, $hasta);
 			if($interval>0){
 				$sep = ';';
-				$space = array('','','','','','','');
+				$space = array('','','','','');
 				$footerFile  = array(
-					'Nombre:', 
+					'Jefe de Reserva:', 
 					session::getValue('username'),
 					'Fecha:',
 					date('d-m-Y',time()),
@@ -35,9 +35,7 @@ class Reporte{
 						"listaActivas" => $listaActivas
 						);
 						$headerFile  = array(
-								'Nombre', 
-								'Id habitacion',
-								'Habitacion',
+								'Nro_Habitación',
 								'Check in',
 								'Check out',
 								'Total dias',
@@ -47,8 +45,6 @@ class Reporte{
 						fputcsv($fp,  $headerFile, $sep);
 						foreach ($listaActivas as $list) {
 							$linea  = array(
-								$list['nombre'], 
-								$list['room_id'],
 								$list['habitacion'],
 								$list['check_in'],
 								$list['check_out'],
@@ -81,7 +77,7 @@ class Reporte{
 						);
 						$fp = fopen('web/ConsumoDeServicios.csv', 'w');
 						$headerFile  = array(
-								'Habitacion',
+								'Nro_Habitación',
 								'Servicio',
 								'Precio',
 								'Fecha'

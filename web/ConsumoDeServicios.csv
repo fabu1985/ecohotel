@@ -1,5 +1,4 @@
-Habitacion;Servicio;Precio;Fecha
-2;Desayuno;60;2016-07-12
-3;Desayuno;60;2016-07-01
-;;;;;;
-Nombre:;"Costilla Luna, Jesica ";Fecha:;16-07-2016
+Nro_Habitación;Servicio;Precio;Fecha
+5;Wifi;15;2016-07-25
+;;;;
+Nombre:;"Diaz Poslemn, Fabiana";Fecha:;18-07-2016

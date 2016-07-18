@@ -17,8 +17,8 @@
           <ul class="nav navbar-nav side-nav">
             <li><a href="{link}main/reservar"><i class="fa fa-building-o"></i> Consultar Disponibilidad</a></li>
             <li style="padding-left: 16px; color: green;"><b>OPCIONES DE ADMINISTRADOR</b></li>
-            <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas</a></li>
-            <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Servicios</a></li>
+            <li><a href="{link}admin"><i class="fa fa-edit"></i> Reservas Pendientes</a></li>
+            <li><a href="{link}admin/room"><i class="fa fa-building-o"></i> Gestión de Servicios</a></li>
             <li><a href="{link}admin/user"><i class="fa fa-users"></i> Usuarios</a></li>
             <li><a href="{link}admin/habitaciones"><i class="fa fa-building-o"></i> Habitaciones</a></li>
             <li class="active"><a href="{link}admin/reporte"><i class="fa fa-edit"></i> Reportes</a></li>
@@ -91,9 +91,7 @@
                 <table class="table table-bordered table-hover table-striped">
                   <thead>
                     <tr>
-                      <th>N°</th>
-                      <th>Id Habitacion</th>
-                      <th>Habitacion</th>
+                      <th>N° Hab.</th>
                       <th>Check in</th>
                       <th>Check out</th>
                       <th>Total días</th>
@@ -103,8 +101,6 @@
                   <tbody id="resultadoRA">
                     [listaActivas]
                     <tr>
-                      <td>{nombre}</td>
-                      <td>{room_id}</td>
                       <td>{habitacion}</td>
                       <td>{check_in}</td>
                       <td>{check_out}</td>
