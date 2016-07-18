@@ -177,10 +177,6 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <label>Fecha</label>
-                        <div class="form-control" name="fecha" type="date" autofocus required>
-                      </div>
                     </fieldset>
                   </div> <!-- /.row --> 
                   <div class="row">
@@ -199,7 +195,7 @@
           <div class="col-lg-7">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Consumos por Habitación</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Consumos por Habitación para la fecha actual</h3>
               </div>
               <div class="panel-body">
                 <div class="col-lg-6">

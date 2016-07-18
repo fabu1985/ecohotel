@@ -35,8 +35,9 @@ Class _Room{
 }
 
 
-public function saveservice($habitacion, $servicio, $fecha){
+public function saveservice($habitacion, $servicio){
 	$precio = 0;
+	$fecha = date("Y-m-d");
 	if($servicio == 'Wifi'){
 		$precio = '15';
 	}
@@ -130,7 +131,7 @@ public function saveservice($habitacion, $servicio, $fecha){
 		}
 
 	public function listaServiciosRegistrados($param=''){
-		$query = 'SELECT s.* from services s order by id desc';
+		$query = 'SELECT s.* from services s where fecha = curdate() order by habitacion asc';
 			if ($result = $this->dbc->query($query)){
 				$lista = Ftn::toArray($result);
 				foreach ($lista as $key => $value) {
@@ -172,12 +173,6 @@ public function saveservice($habitacion, $servicio, $fecha){
 					foreach ($regRoom as $key => $reg) {
 						$to = Ftn::difDate($fechaHasta, $reg['since']);
 						$since = Ftn::difDate($reg['to'], $fechaDesde);
-						//echo "<br/>Room Id: ".$room["room_id"]."<br/>";
-						//echo Ftn::totable($regRoom);
-						//echo "<br>Fecha Desde: ".$fechaDesde;
-						//echo "<br>Fecha Hasta: ".$fechaHasta;
-						//echo "<br/>ToParam < SinceReg: ".$to;
-						//echo "<br/>SinceParam > ToReg: ".$since;	
 						if ($to>0 || $since>0 || $reg['status']==2){
 							
 						}else{

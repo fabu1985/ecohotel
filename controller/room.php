@@ -58,7 +58,7 @@ class Room{
 
 	public static function saveservice(){
 		$room = new _room();
-		$room->saveservice(@$_POST["habitacion"], @$_POST["servicio"], @$_POST["fecha"]);
+		$room->saveservice(@$_POST["habitacion"], @$_POST["servicio"]);
 		header("location:".HOME."admin/room");
 	}
 
