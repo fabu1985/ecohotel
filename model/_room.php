@@ -37,7 +37,10 @@ Class _Room{
 
 public function saveservice($habitacion, $servicio){
 	$precio = 0;
-	$fecha = date("Y-m-d");
+	//$fecha = date('Y-m-1',time());
+	$fecha = date('Y-m-d');
+	$nuevafecha = strtotime ( '-1 day' , strtotime ( $fecha ) ) ;
+	$nuevafecha = date ( 'Y-m-d' , $nuevafecha );
 	if($servicio == 'Wifi'){
 		$precio = '15';
 	}
@@ -57,7 +60,7 @@ public function saveservice($habitacion, $servicio){
 		habitacion,
 		servicio,
 		precio,
-		fecha) values ('$habitacion', '$servicio', '$precio', '$fecha')";
+		fecha) values ('$habitacion', '$servicio', '$precio', '$nuevafecha')";
 		if ($this->dbc->query($query)){
 		}else{
 			die('Error de Conexion con la DB: '.$query);
@@ -266,6 +269,15 @@ public function saveservice($habitacion, $servicio){
 		}else{
 			die('Error de Conexion con la DB: '.$query);
 		}
+	}
+
+	public function deleteService($id){
+		$query = "DELETE FROM `services`  WHERE `id`=$id";
+		if ($this->dbc->query($query)){
+			return "success";
+		}else{
+			die('Error de Conexion con la DB: '.$query);
+		}	
 	}
 
 	public function setId($id){

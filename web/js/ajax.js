@@ -47,7 +47,7 @@ $(function(){
 	$(".confirm").click(function(){
 		var resNo = $(this).attr('tag');
 		if (confirm('Reservar Habitación?')){
-			var url =  'ecohotel/reservar/guardar';
+			var url =  'reservar/guardar';
 	        $.post(url, 
 	        	{id: resNo},
 			    function(data,status){
@@ -60,7 +60,7 @@ $(function(){
 	$(".decline").click(function(){
 		var resNo = $(this).attr('tag');
 		if (confirm('Declinar Reserva?')){
-			var url =  'ecohotel/reservar/declinar';
+			var url =  'reservar/declinar';
 	        $.post(url, 
 	        	{id: resNo},
 			    function(data,status){
@@ -69,7 +69,17 @@ $(function(){
 			);
 	    }
 	});
+
+	$(".declineservice").click(function(){
+		var resNo = $(this).attr('tag');
+		if (confirm('Eliminar Servicio?')){
+			var url =  'eliminarServicio';
+      $.post(url, 
+        	{id: resNo},
+		    function(data,status){
+		      location.reload();
+		    }
+			);
+	   }
+	});
 });
-
-
-

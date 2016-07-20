@@ -44,7 +44,7 @@ class Room{
 				view::parse("room", $data);
 			}else{
 				$room->save();
-				header("location:".HOME."admin/room");
+				header("location:".HOME."admin/habitaciones");
 			}
 		}else{
 			$data=array(

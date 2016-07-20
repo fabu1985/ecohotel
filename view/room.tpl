@@ -229,7 +229,7 @@
                         <td>{fecha}</td>
                         <td>
                           <a href="#">
-                            <i class="fa fa-trash-o fa-1x col-lg-4 decline" tag="{habitacion}"></i>
+                            <i class="fa fa-trash-o fa-1x col-lg-4 declineservice" tag="{id}"></i>
                           </a>
                         </td>
                       </tr>

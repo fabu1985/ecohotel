@@ -126,6 +126,14 @@ class Admin{
 			header("location: ".HOME);
 		}	
 	}
+
+	public static function eliminarServicio(){
+		if (isset($_POST) && !empty($_POST['id'])){
+			$servicio = new _room();
+			$servicio->deleteService($_POST['id']);
+		}else{
+		}
+	}
 }
 
  ?>
