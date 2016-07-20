@@ -12,7 +12,7 @@ $(function(){
 	});
 
 	var search = function(data){
-		var url =  'ecohotel/reserva/ajax/search/_'+$("#where").attr('tag')
+		var url =  'reserva/ajax/search/_'+$("#where").attr('tag')
         $.ajax({
             data:  data,
             url:   url,
@@ -29,7 +29,7 @@ $(function(){
 	$(".savers").on('click', function(){
 		var roomId = $(".savers").attr('tag');
 		if (confirm('Confirmar Reserva')){
-			var url =  'ecohotel/reservar/confirmar';
+			var url =  'reservar/confirmar';
 	        $.post(url, 
 	        	{id: roomId,
 	        	 habitacion: $(".savers").attr('habitacion'),
@@ -38,7 +38,7 @@ $(function(){
 	        	 to: $('#to'+roomId).text()
 	            },
 			    function(data,status){
-			      window.location.href = "ecohotel/main/misreservas";
+			      window.location.href = "main/misreservas";
 			    }
 			);
 	    }

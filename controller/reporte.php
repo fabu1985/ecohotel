@@ -125,10 +125,7 @@ class Reporte{
 		else{
 			View::parse("reporte");
 		}
-	}
-
-	
-
+	}	
 }
 
  ?>

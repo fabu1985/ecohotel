@@ -71,14 +71,13 @@ public function saveservice($habitacion, $servicio){
 		$query = '';
 		if (isset($this->category_id) && isset($this->price)) {
 		    $query = 'UPDATE `room` SET  
-			`status`= '.$this->status.',
 			`price`= '.$this->price.',
 			`category_id`= '.$this->category_id.' 
 			WHERE number = '.$this->number;
 		}else{
-			$query = 'UPDATE `room` SET  
+			/*$query = 'UPDATE `room` SET  
 			`status`= '.$this->status.'
-			WHERE number = '.$this->number;
+			WHERE number = '.$this->number;*/
 		}
 		echo $query;
 		if ($this->dbc->query($query)){

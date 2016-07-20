@@ -69,7 +69,6 @@ class Room{
 		if (!empty($_POST)){
 			$pageServices = true;
 			$room->setNumber($_POST["numero"]);
-			$room->setStatus($_POST["status"]);
 			if(isset($_POST["description"])){
 				$room->setCategory_id($_POST["description"]);	
 				$pageServices = false;

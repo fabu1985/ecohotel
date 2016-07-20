@@ -70,13 +70,9 @@
                         </div>
                       </div>
                       <div class="col-lg-4">
-                        <div class="form-group input-group">
-                          <label> Disponibilidad </label>
-                          <select class="form-control" name="status" id="room_status">
-                              <option></option>
-                              <option value="0">Libre</option>
-                              <option value="1">Ocupada</option>
-                          </select> 
+                        <div class="form-group">
+                          <label> Precio </label>
+                          <input class="form-control " name="precio" type="text"> 
                         </div>
                       </div>
                       <div class="col-lg-4">
@@ -140,16 +136,6 @@
                           </select> 
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="form-group input-group">
-                          <label> Disponibilidad </label>
-                          <select class="form-control" name="status" id="room_status">
-                              <option></option>
-                              <option value="0">Libre</option>
-                              <option value="1">Ocupada</option>
-                          </select> 
-                        </div>
-                      </div>
                     </fieldset>
                   </div>
                   <div class="row">
@@ -171,22 +157,16 @@
           <div class="col-lg-12">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Listado de habitaciones activas</h3>
+                <h3 class="panel-title"><i class="fa fa-list-ul"></i> Listado de habitaciones</h3>
               </div>
+              </fieldset>
               <div class="panel-body">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                   <div class="form-group input-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-search"></i> Tipo de Habitación <span class="caret"></span>
-                    </button>
-                    <ul  id="where" class="dropdown-menu" role="menu" tag="room">
-                      <li><a id="what" href="#" value="">Todas</a></li>
-                      <li><a id="what" href="#" value="1">Single</a></li>
-                      <li><a id="what" href="#" value="2">Double</a></li>
-                      <li><a id="what" href="#" value="3">Triple</a></li>
-                    </ul>
-                  </div>
-                </div>  
+                </div>
+                </div>
+              </fieldset>
+                <div class="col-lg-12">
                 <div class="table-responsive">
                   <table class="table table-bordered table-hover table-striped tablesorter">
                     <thead>
