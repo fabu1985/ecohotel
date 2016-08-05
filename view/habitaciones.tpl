@@ -66,18 +66,18 @@
                       <div class="col-lg-4">
                         <div class="form-group">
                           <label> N° de Habitación </label>
-                          <input class="form-control " name="numero" type="numero" > 
+                          <input class="form-control " required name="numero" type="numero" > 
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="form-group">
                           <label> Precio </label>
-                          <input class="form-control " name="precio" type="text"> 
+                          <input class="form-control " required name="precio" type="text"> 
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <label> Categoria </label>
-                          <select class="form-control" name="description">
+                          <select class="form-control" required name="description">
                               <option></option>
                               [listaCateg]
                               <option value="{id}">{description}</option>
@@ -122,13 +122,13 @@
                       <div class="col-lg-4">
                         <div class="form-group">
                           <label> Precio </label>
-                          <input class="form-control " name="precio" type="text" id="room_price"> 
+                          <input class="form-control " required name="precio" type="text" id="room_price"> 
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="form-group input-group">
                           <label> Categoria </label>
-                          <select class="form-control" name="description" id="room_description">
+                          <select class="form-control" required name="description" id="room_description">
                               <option></option>
                               [listaCateg2]
                               <option value="{id}">{description}</option>

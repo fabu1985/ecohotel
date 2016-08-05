@@ -75,7 +75,7 @@
                       <div class="col-lg-6">
                         <div class="form-group input-group">
                           <label> Disponibilidad </label>
-                          <select class="form-control" name="status" id="room_status" required>
+                          <select class="form-control" required name="status" id="room_status">
                               <option></option>
                               <option value="0">Libre</option>
                               <option value="1">Ocupada</option>
