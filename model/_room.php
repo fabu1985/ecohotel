@@ -57,10 +57,10 @@ public function saveservice($habitacion, $servicio){
 		$precio = '120';
 	}
 	$query = "INSERT INTO services(
-		habitacion,
+		room,
 		servicio,
 		precio,
-		fecha) values ('$habitacion', '$servicio', '$precio', '$nuevafecha')";
+		date) values ('$habitacion', '$servicio', '$precio', '$nuevafecha')";
 		if ($this->dbc->query($query)){
 		}else{
 			die('Error de Conexion con la DB: '.$query);
@@ -115,7 +115,7 @@ public function saveservice($habitacion, $servicio){
 		}
 
 	public function listaServicios($desde='', $hasta=''){
-		$query = 'SELECT s.* from services s where fecha >= "'.$desde.'" and fecha <= "'.$hasta.'" order by id desc';
+		$query = 'SELECT s.* from services s where date >= "'.$desde.'" and date <= "'.$hasta.'" order by id desc';
 			if ($result = $this->dbc->query($query)){
 				$lista = Ftn::toArray($result);
 				foreach ($lista as $key => $value) {
@@ -133,7 +133,7 @@ public function saveservice($habitacion, $servicio){
 		}
 
 	public function listaServiciosRegistrados($param=''){
-		$query = 'SELECT s.* from services s where fecha = curdate() order by habitacion asc';
+		$query = 'SELECT s.* from services s where date = curdate() order by room asc';
 			if ($result = $this->dbc->query($query)){
 				$lista = Ftn::toArray($result);
 				foreach ($lista as $key => $value) {

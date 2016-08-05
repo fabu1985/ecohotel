@@ -138,7 +138,7 @@
                       <td>{habitacion}</td>
                       <td>{servicio}</td>
                       <td>{precio}</td>
-                      <td>{fecha}</td>
+                      <td>{date}</td>
                     </tr>
                     [listaServicios]
                   </tdoby>

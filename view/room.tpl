@@ -223,10 +223,10 @@
                     <tbody id="resultado">
                       [listaServiciosRegistrados]
                       <tr id="room_{number}">
-                        <td>{habitacion}</td>
+                        <td>{room}</td>
                         <td>{servicio}</td>
                         <td>${precio}</td>
-                        <td>{fecha}</td>
+                        <td>{date}</td>
                         <td>
                           <a href="#">
                             <i class="fa fa-trash-o fa-1x col-lg-4 declineservice" tag="{id}"></i>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Reporte{
 	public static function __autoload(){
 		$dbc = 	DB::connect();
@@ -88,7 +88,7 @@ class Reporte{
 								$list['habitacion'],
 								$list['servicio'],
 								$list['precio'],
-								$list['fecha']
+								$list['date']
 								);
 							
 						    fputcsv($fp,  $linea, $sep);			
