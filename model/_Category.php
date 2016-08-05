@@ -4,7 +4,7 @@ Class _Category{
 	private $dbc;
 	private $id;
 	private $description;
-	private $prize;
+	private $prices;
 	private $last_update;
 
 
@@ -17,10 +17,10 @@ Class _Category{
 		$query = 'INSERT INTO category(
 		id,	
 		description, 
-		prize) values (
+		prices) values (
 		50,
 		"'.$this->description.'", 
-		"'.$this->prize.'")';}
+		"'.$this->prices.'")';}
 
 	public function listar($param='*'){
 			$query = 'SELECT '.$param.' FROM category 
@@ -61,12 +61,12 @@ Class _Category{
 					return $this->description;
 				}
 
-	public function setPrize($prize){
-					$this->prize = $prize;
+	public function setPrices($prices){
+					$this->prices = $prices;
 				}
 
-	public function getPrize(){
-					return $this->prize;
+	public function getPrices(){
+					return $this->prices;
 				}
 
 	public function setLast_update($last_update){

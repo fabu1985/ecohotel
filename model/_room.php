@@ -154,7 +154,7 @@ public function saveservice($habitacion, $servicio){
 		$query = 'SELECT  	`r`.`id` as room_id,
 							`r`.`number` as nro,
 							`cat`.`description` as `categoria`,							  
-							`cat`.`prize` as precio,
+							`cat`.`prices` as precio,
 							`r`.`status` as estado,
 							`r`.`last_update` as "ultimo cambio"
 					    FROM `room` `r`, `category` `cat`

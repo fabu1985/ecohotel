@@ -9,7 +9,7 @@ class Category{
 	private $dbc;
 	private $id;
 	private $description;
-	private $prize;
+	private $prices;
 	private $last_update;
 	
 	public static function save(){
@@ -27,7 +27,7 @@ class Category{
 				$error = 1;
 				$errorMsj .= "El número ingresado no es válido.</br>";
 			}else{
-				$category->setPrize($_POST["precio"]);
+				$category->setPrices($_POST["precio"]);
 			}
 			if ($error == 1){
 				$errorMsj = "<div class='alert alert-danger col-lg-9'>".
